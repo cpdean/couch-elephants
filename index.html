@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<title>Elephants</title>
+<!-- data.js should just have a single line that says "database_location = 'http://path-to-your-couchdb:couchdbport/'; " -->
+<script type="text/javascript" charset="utf-8" src="data.js"> </script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"> </script>
+
+<script type="text/javascript">
+
+//Import the couch_api
+var couch_api = database_location+"_utils/script/couch.js";
+var jquery_couch_api = database_location+"_utils/script/jquery.couch.js";
+var couch_api = jquery_couch_api;
+console.log(couch_api);
+
+$(document).ready(function(){
+        $.getScript(couch_api).success(function(){
+            // test api functions
+            //setup couch env
+
+            //CouchDB.protocol = "http://";
+            //couch = new CouchDB();
+            //var result = JSON.parse(CouchDB.request("GET", database_location, {}).responseText);
+            //if(result.couchdb == "Welcome"){
+            //console.log("success");
+            //}
+            console.log(CouchDB);
+            //console.log(result);
+            //console.log(result.couchdb);
+
+        });
+});
+
+</script>
+
+
+</head>
+<body>
+openconsole
+
+</body>
+</html>
